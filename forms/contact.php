@@ -5,12 +5,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+    $subject = $_POST['subject'];
 
     // Set the recipient email address
-    $to = 'your-email@example.com';
-
-    // Set the email subject
-    $subject = 'New contact form submission';
+    $to = 'sales@datascrapa.com';
 
     // Build the email message
     $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
@@ -28,5 +26,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo 'Unable to send email';
     }
 }
-
 ?>
